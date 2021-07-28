@@ -78,14 +78,29 @@ if /I %start_mode% EQU PM (
 		set /A start_hrN=%start_hrN% + 12
 	)
 )
+if /I %start_mode% EQU AM (
+	if %start_hrN% EQU 12 (
+		set /A start_hrN=%start_hrN% - 12
+	)
+)
 if /I %end_mode% EQU PM (
 	if %end_hrN% LSS 12 (
 		set /A end_hrN=%end_hrN% + 12
 	)
 )
+if /I %end_mode% EQU AM (
+	if %end_hrN% EQU 12 (
+		set /A end_hrN=%end_hrN% - 12
+	)
+)
 if /I %mod% EQU PM (
 	if %hrN% LSS 12 (
 		set /A hrN=%hrN% + 12
+	)
+)
+if /I %mod% EQU AM (
+	if %hrN% EQU 12 (
+		set /A hrN=%hrN% - 12
 	)
 )
 set /A start_minN=%start_hrN% * 60 + %start_minN%
