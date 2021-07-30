@@ -9,6 +9,8 @@ set "end_hr=06"
 set "end_min=00"
 set "end_mode=am"
 set /A sz_time=60
+set /A start_minN=0
+set /A end_minN=0
 :loop
 if exist Set_System_Mode.txt (
 	call :setSystemMode
@@ -18,6 +20,8 @@ if !len! EQU 2 (
 	if %start_hr:~0,1% EQU 0 (
 		set "start_hr=%start_hr:~-1%"
 	)
+) else (
+	goto :continue
 )
 call :strLength %start_min% len
 if !len! GEQ 2 (
@@ -41,6 +45,30 @@ set /A start_hrN=%start_hr%
 set /A start_minN=%start_min%
 set /A end_hrN=%end_hr%
 set /A end_minN=%end_min%
+:: Make the necessary conversion A
+if /I %start_mode% EQU PM (
+	if %start_hrN% LSS 12 (
+		set /A start_hrN=%start_hrN% + 12
+	)
+)
+if /I %start_mode% EQU AM (
+	if %start_hrN% EQU 12 (
+		set /A start_hrN=%start_hrN% - 12
+	)
+)
+if /I %end_mode% EQU PM (
+	if %end_hrN% LSS 12 (
+		set /A end_hrN=%end_hrN% + 12
+	)
+)
+if /I %end_mode% EQU AM (
+	if %end_hrN% EQU 12 (
+		set /A end_hrN=%end_hrN% - 12
+	)
+)
+set /A start_minN=%start_hrN% * 60 + %start_minN%
+set /A end_minN=%end_hrN% * 60 + %end_minN%
+:continue
 powershell Get-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name SystemUsesLightTheme | find /I "system"> tmp_val.txt
 set /p sys_mode=< tmp_val.txt
 powershell Get-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme | find /I "app"> tmp_val.txt
@@ -72,27 +100,7 @@ if !len! GEQ 2 (
 )
 set /A hrN=%hr%
 set /A minN=%min%
-:: Make the necessary conversion
-if /I %start_mode% EQU PM (
-	if %start_hrN% LSS 12 (
-		set /A start_hrN=%start_hrN% + 12
-	)
-)
-if /I %start_mode% EQU AM (
-	if %start_hrN% EQU 12 (
-		set /A start_hrN=%start_hrN% - 12
-	)
-)
-if /I %end_mode% EQU PM (
-	if %end_hrN% LSS 12 (
-		set /A end_hrN=%end_hrN% + 12
-	)
-)
-if /I %end_mode% EQU AM (
-	if %end_hrN% EQU 12 (
-		set /A end_hrN=%end_hrN% - 12
-	)
-)
+:: Make the necessary conversion B
 if /I %mod% EQU PM (
 	if %hrN% LSS 12 (
 		set /A hrN=%hrN% + 12
@@ -103,8 +111,6 @@ if /I %mod% EQU AM (
 		set /A hrN=%hrN% - 12
 	)
 )
-set /A start_minN=%start_hrN% * 60 + %start_minN%
-set /A end_minN=%end_hrN% * 60 + %end_minN%
 set /A minN=%hrN% * 60 + %minN%
 if %start_minN% LSS %end_minN% (goto :forward_range)
 if %start_minN% GTR %end_minN% (goto :reverse_range)
