@@ -2,6 +2,8 @@
 
 ![Platform Support](https://img.shields.io/badge/platform-windows-blue)
 
+![Device Support](https://img.shields.io/badge/device-desktop%2C%20laptop-lightgrey)
+
 ![Language Used](https://img.shields.io/badge/language-Batch%20Script%2C%20VBScript-yellow)
 
 A Windows based program that turns on/off DARK MODE based on custom time schedule
