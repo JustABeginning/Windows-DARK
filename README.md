@@ -1,8 +1,9 @@
+# Windows-DARK
+
 ![Platform Support](https://img.shields.io/badge/platform-windows-blue)
 
 ![Language Used](https://img.shields.io/badge/language-Batch%20Script%2C%20VBScript-yellow)
 
-# Windows-DARK
 A Windows based program that turns on/off DARK MODE based on custom time schedule
 
 # Installation :
