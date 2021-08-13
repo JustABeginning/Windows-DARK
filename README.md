@@ -33,5 +33,5 @@ A Windows based program that turns on/off DARK MODE based on custom time schedul
 
 # Uninstallation :
 
-1. Delete the `Launch_DARK.bat` *shortcut* from the location which opens in **step-3** of *Installation*.
+1. Delete the `Launch_DARK.bat` *shortcut* from the location which opens in **step-3** of ***Installation***.
 2. Restart the Computer.
