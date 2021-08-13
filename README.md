@@ -1,8 +1,9 @@
 # Windows-DARK
 
-![Platform Support](https://img.shields.io/badge/platform-windows-blue)
-
-![Device Support](https://img.shields.io/badge/device-desktop%2C%20laptop-lightgrey)
+<p align=left>
+<img src="https://img.shields.io/badge/platform-windows-blue" alt="Platform Support">
+<img src="https://img.shields.io/badge/device-desktop%2C%20laptop-lightgrey" alt="Device Support">
+</p>
 
 ![Language Used](https://img.shields.io/badge/language-Batch%20Script%2C%20VBScript-yellow)
 
