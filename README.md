@@ -11,6 +11,7 @@ A Windows based program that turns on/off DARK MODE based on custom time schedul
 
 <p align=center>
 <img src="Dark_Mode.jpg" alt="Dark Mode Preview">
+<br>
 <img src="Light_Mode.jpg" alt="Light Mode Preview">
 </p>
 
