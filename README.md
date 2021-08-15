@@ -10,8 +10,11 @@
 A Windows based program that turns on/off DARK MODE based on custom time schedule
 
 <p align=center>
-<img src="Dark_Mode.jpg" alt="Dark Mode Preview" height=400 width=600 hspace=10>
-<img src="Light_Mode.jpg" alt="Light Mode Preview" height=400 width=600 hspace=10>
+<img src="Dark_Mode.jpg" alt="Dark Mode Preview">
+</p>
+
+<p align=center>
+<img src="Light_Mode.jpg" alt="Light Mode Preview">
 </p>
 
 # Installation :
