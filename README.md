@@ -9,6 +9,11 @@
 
 A Windows based program that turns on/off DARK MODE based on custom time schedule
 
+<p align=center>
+<img src="Dark_Mode.jpg" alt="Dark Mode Preview" height=40 width=60 hspace=10>
+<img src="Light_Mode.jpgg" alt="Light Mode Preview" height=40 width=60 hspace=10>
+</p>
+
 # Installation :
 
 1. Download all the files and extract/save them in a folder (Give it any name) [All the files must be in the same folder].
@@ -21,6 +26,11 @@ A Windows based program that turns on/off DARK MODE based on custom time schedul
 
 + This program requires that the system time is not set in 24 HR format, i.e., it is set in AM/PM format.
 + In order to set custom values, use `Custom_Time_Schedule.bat` file.
+
+<p align=center>
+<img src="Custom_Schedule.jpg" alt="Set Custom Time Schedule">
+</p>
+
 + To skip the value of a parameter, press enter. This will accept the default/recently saved (if any) value for that parameter.
 + The DEFAULT VALUES are:
 	+ Start HR - 05
