@@ -19,7 +19,7 @@ A Windows based program that turns on/off DARK MODE based on custom time schedul
 
 # Installation :
 
-1. Download all the files and extract/save them in a folder (Give it any name) [All the files must be in the same folder].
+1. [Download](https://github.com/JustABeginning/Windows-DARK/releases) all the files and extract/save them in a folder (Give it any name) [All the files must be in the same folder].
 2. Create a shortcut of `Launch_DARK.bat` file.
 3. Press `Win+R` from keyboard or, open windows run menu, then type `shell:startup` and press enter.
 4. Save the shortcut created in **step-2** in the location which opens in **step-3**.
