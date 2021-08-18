@@ -1,8 +1,8 @@
 # Windows-DARK
 
 <p align=left>
-<a href="https://github.com/JustABeginning/Windows-DARK.git#JAB"><img src="https://img.shields.io/badge/platform-windows-blue" alt="Platform Support"></a>
-<a href="https://github.com/JustABeginning/Windows-DARK.git#JAB"><img src="https://img.shields.io/badge/device-desktop%2C%20laptop-lightgrey" alt="Device Support"></a>
+<a href="https://github.com/JustABeginning/Windows-DARK#JAB"><img src="https://img.shields.io/badge/platform-windows-blue" alt="Platform Support"></a>
+<a href="https://github.com/JustABeginning/Windows-DARK#JAB"><img src="https://img.shields.io/badge/device-desktop%2C%20laptop-lightgrey" alt="Device Support"></a>
 </p>
 
 [![Language Used](https://img.shields.io/badge/language-Batch%20Script%2C%20VBScript-yellow)](https://github.com/JustABeginning/Windows-DARK.git#JAB)
@@ -10,11 +10,11 @@
 A Windows based program that turns on/off DARK MODE based on custom time schedule
 
 <p align=center>
-<a href="https://github.com/JustABeginning/Windows-DARK.git#JAB"><img src="Dark_Mode.jpg" alt="Dark Mode Preview"></a>
+<a href="https://github.com/JustABeginning/Windows-DARK#JAB"><img src="Dark_Mode.jpg" alt="Dark Mode Preview"></a>
 </p>
 
 <p align=center>
-<a href="https://github.com/JustABeginning/Windows-DARK.git#JAB"><img src="Light_Mode.jpg" alt="Light Mode Preview"></a>
+<a href="https://github.com/JustABeginning/Windows-DARK#JAB"><img src="Light_Mode.jpg" alt="Light Mode Preview"></a>
 </p>
 
 # Installation :
@@ -31,7 +31,7 @@ A Windows based program that turns on/off DARK MODE based on custom time schedul
 + In order to set custom values, use `Custom_Time_Schedule.bat` file.
 
 <p align=center>
-<a href="https://github.com/JustABeginning/Windows-DARK.git#JAB"><img src="Custom_Schedule.jpg" alt="Set Custom Time Schedule"></a>
+<a href="https://github.com/JustABeginning/Windows-DARK#JAB"><img src="Custom_Schedule.jpg" alt="Set Custom Time Schedule"></a>
 </p>
 
 + To skip the value of a parameter, press enter. This will accept the default/recently saved (if any) value for that parameter.
