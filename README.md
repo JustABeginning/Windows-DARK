@@ -25,7 +25,7 @@ A Windows based program that turns on/off DARK MODE based on custom time schedul
 4. Save the shortcut created in **step-2** in the location which opens in **step-3**.
 5. Return back to the folder of **step-1** and click on `Launch_DARK.bat` file.
 
-:point_right: **Steps 1 to 4** are shown below :point_down:
+:point_right: **Steps 1 to 4** have been shown below :point_down:
 
 <p align=center>
 <a href="https://github.com/JustABeginning/Windows-DARK#JAB">
