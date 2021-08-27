@@ -56,3 +56,9 @@ A Windows based program that turns on/off DARK MODE based on custom time schedul
 
 1. Delete the `Launch_DARK.bat` *shortcut* from the location which opens in **step-3** of ***Installation***.
 2. Restart the Computer.
+
+# :clap: A Big Thanks To
+
+## Stargazers
+
+[![Stargazers repo roster for @JustABeginning/Windows-DARK](https://reporoster.com/stars/JustABeginning/Windows-DARK)](https://github.com/JustABeginning/Windows-DARK/stargazers)
