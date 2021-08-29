@@ -5,7 +5,10 @@
 <a href="https://github.com/JustABeginning/Windows-DARK#JAB"><img src="https://img.shields.io/badge/device-desktop%2C%20laptop-lightgrey" alt="Device Support"></a>
 </p>
 
-[![Language Used](https://img.shields.io/badge/language-Batch%20Script%2C%20VBScript-yellow)](https://github.com/JustABeginning/Windows-DARK#JAB)
+<p align=left>
+<a href="https://github.com/JustABeginning/Windows-DARK#JAB"><img alt="Language Used" src="https://img.shields.io/badge/language-Batch%20Script%2C%20VBScript-yellow"></a>
+<a href="https://github.com/JustABeginning/Windows-DARK#JAB"<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/JustABeginning/Windows-DARK"></a>
+</p>
 
 A Windows based program that turns on/off DARK MODE based on custom time schedule
 
