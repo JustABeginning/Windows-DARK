@@ -20,7 +20,7 @@ A Windows based program that turns on/off DARK MODE based on custom time schedul
 <a href="https://github.com/JustABeginning/Windows-DARK#JAB"><img src="Images/Light_Mode.jpg" alt="Light Mode Preview"></a>
 </p>
 
-# Installation
+# Install
 
 1. [Download](https://github.com/JustABeginning/Windows-DARK/releases) all the files and extract/save them in a folder (Give it any name) [All the files must be in the same folder].
 2. Create a *shortcut* of `Launch_DARK.bat` file.
@@ -55,9 +55,9 @@ A Windows based program that turns on/off DARK MODE based on custom time schedul
 	+ End MODE - AM
 	+ Snooze time - 1 minute
 
-# Uninstallation
+# Uninstall
 
-1. Delete the `Launch_DARK.bat` *shortcut* from the location which opens in **step-3** of ***Installation***.
+1. Delete the `Launch_DARK.bat` *shortcut* from the location which opens in **step-3** of ***Install***.
 2. Restart the Computer.
 
 # :clap: A Big Thanks To
