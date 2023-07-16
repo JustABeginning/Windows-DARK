@@ -34,13 +34,13 @@ set "end_hr=%end_tim:~0,2%"
 set "end_min=%end_tim:~3,3%"
 set "end_mode=%end_tim:~-2%"
 set /A sz_time=%tmp_sz% * 60
-echo %start_hr%> Set_System_Mode.txt
-echo %start_min%>> Set_System_Mode.txt
-echo %start_mode%>> Set_System_Mode.txt
-echo %end_hr%>> Set_System_Mode.txt
-echo %end_min%>> Set_System_Mode.txt
-echo %end_mode%>> Set_System_Mode.txt
-echo %sz_time%>> Set_System_Mode.txt
+echo %start_hr%> %setSM%
+echo %start_min%>> %setSM%
+echo %start_mode%>> %setSM%
+echo %end_hr%>> %setSM%
+echo %end_min%>> %setSM%
+echo %end_mode%>> %setSM%
+echo %sz_time%>> %setSM%
 echo.
 echo Values have been saved SUCCESSFULLY !
 echo.
@@ -50,7 +50,7 @@ exit /b %errorlevel%
 :: End of Main Function
 :setSystemMode
 set /A count=0
-for /f "tokens=*" %%a in (Set_System_Mode.txt) do (
+for /f "tokens=*" %%a in (%setSM%) do (
 	call :setValue %%a
 )
 exit /b 0

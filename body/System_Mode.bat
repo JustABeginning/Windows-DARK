@@ -8,11 +8,12 @@ set "start_mode=pm"
 set "end_hr=06"
 set "end_min=00"
 set "end_mode=am"
-set /A sz_time=60
 set /A start_minN=0
 set /A end_minN=0
+set /A sz_time=60
 :loop
-if exist Set_System_Mode.txt (
+set "setSM=Set_System_Mode.txt"
+if exist %setSM% (
 	call :setSystemMode
 )
 call :strLength %start_hr% len
@@ -69,10 +70,12 @@ if /I %end_mode% EQU AM (
 set /A start_minN=%start_hrN% * 60 + %start_minN%
 set /A end_minN=%end_hrN% * 60 + %end_minN%
 :continue
-powershell Get-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name SystemUsesLightTheme | find /I "system"> tmp_val.txt
-set /p sys_mode=< tmp_val.txt
-powershell Get-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme | find /I "app"> tmp_val.txt
-set /p app_mode=< tmp_val.txt
+:: Create TEMP File
+set "tmp_val=tmp_val.txt"
+powershell Get-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name SystemUsesLightTheme | find /I "system"> %tmp_val%
+set /p sys_mode=< %tmp_val%
+powershell Get-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme | find /I "app"> %tmp_val%
+set /p app_mode=< %tmp_val%
 set "sys_mode=%sys_mode:~-1%"
 set "app_mode=%app_mode:~-1%"
 set /A sys_mode=%sys_mode%
@@ -80,9 +83,10 @@ set /A app_mode=%app_mode%
 if %sys_mode% EQU 1 (
 	powershell "Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name SystemUsesLightTheme -Value 0 -Type Dword -Force" > nul
 )
-time /t> tmp_val.txt
-set /p tim=< tmp_val.txt
-del tmp_val.txt
+time /t> %tmp_val%
+set /p tim=< %tmp_val%
+:: Delete TEMP File
+del %tmp_val%
 set "hr=%tim:~0,2%"
 set "min=%tim:~3,3%"
 set "mod=%tim:~-2%"
@@ -147,7 +151,7 @@ if %app_mode% EQU 0 (
 exit /b 0
 :setSystemMode
 set /A count=0
-for /f "tokens=*" %%a in (Set_System_Mode.txt) do (
+for /f "tokens=*" %%a in (%setSM%) do (
 	call :setValue %%a
 )
 exit /b 0
